@@ -296,6 +296,32 @@
       box-shadow: 0 16px 28px rgba(0, 0, 0, 0.25);
       z-index: 20;
     }
+
+    /* Cake Section */
+    .cake-section {
+      margin-top: clamp(2rem, 5vw, 3.5rem);
+      padding-top: clamp(1.5rem, 4vw, 2.5rem);
+      border-top: 1px dashed #d9c39a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .cake-word {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      color: var(--accent-red);
+      letter-spacing: 3px;
+      text-shadow: 1px 2px 3px rgba(0,0,0,0.08);
+    }
+
+    .cake-illustration {
+      width: clamp(260px, 55vw, 460px);
+      height: auto;
+      margin: clamp(0.5rem, 2vw, 1rem) 0;
+      filter: drop-shadow(0 14px 20px rgba(80, 40, 20, 0.18));
+    }
   </style>
 </head>
 <body>
@@ -386,6 +412,101 @@
   </div>
 </aside>
 
+        </div>
+
+        <!-- Cake Section -->
+        <div class="cake-section">
+          <span class="cake-word">Happy</span>
+          <svg class="cake-illustration" viewBox="0 0 460 420" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="creamShade" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="100%" stop-color="#fbeee0"/>
+              </linearGradient>
+            </defs>
+
+            <!-- plate shadow -->
+            <ellipse cx="230" cy="390" rx="185" ry="18" fill="#00000014"/>
+            <ellipse cx="230" cy="382" rx="180" ry="17" fill="#f1dfc0"/>
+
+            <!-- bottom tier -->
+            <rect x="70" y="300" width="320" height="75" rx="14" fill="url(#creamShade)" stroke="#eddcc0" stroke-width="2"/>
+            <path d="M70 320 Q100 300 130 320 T190 320 T250 320 T310 320 T390 320" fill="none" stroke="#7a4a2b" stroke-width="5" stroke-linecap="round"/>
+            <!-- happy birthday banner on bottom tier -->
+            <rect x="150" y="335" width="160" height="30" rx="15" fill="#7a4a2b"/>
+            <text x="230" y="349" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#fff" font-weight="bold" letter-spacing="1">HAPPY</text>
+            <text x="230" y="360" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#fff" font-weight="bold" letter-spacing="1">BIRTHDAY</text>
+
+            <!-- middle tier -->
+            <rect x="110" y="225" width="240" height="80" rx="14" fill="url(#creamShade)" stroke="#eddcc0" stroke-width="2"/>
+            <path d="M110 245 Q135 225 160 245 T210 245 T260 245 T310 245 T350 245" fill="none" stroke="#7a4a2b" stroke-width="5" stroke-linecap="round"/>
+            <!-- strawberries on middle tier top edge -->
+            <g>
+              <circle cx="150" cy="228" r="10" fill="#e6414d"/>
+              <path d="M144 220 l4 8 l4 -8 z" fill="#4c9a4c"/>
+              <circle cx="200" cy="222" r="11" fill="#e6414d"/>
+              <path d="M193 213 l5 9 l5 -9 z" fill="#4c9a4c"/>
+              <circle cx="255" cy="222" r="11" fill="#e6414d"/>
+              <path d="M248 213 l5 9 l5 -9 z" fill="#4c9a4c"/>
+              <circle cx="310" cy="228" r="10" fill="#e6414d"/>
+              <path d="M304 220 l4 8 l4 -8 z" fill="#4c9a4c"/>
+            </g>
+
+            <!-- top tier -->
+            <rect x="150" y="150" width="160" height="80" rx="14" fill="url(#creamShade)" stroke="#eddcc0" stroke-width="2"/>
+            <path d="M150 170 Q170 150 190 170 T230 170 T270 170 T310 170" fill="none" stroke="#7a4a2b" stroke-width="5" stroke-linecap="round"/>
+            <!-- cream swirls on top -->
+            <g fill="#fffdf8" stroke="#f3e2c7" stroke-width="1.5">
+              <circle cx="170" cy="152" r="14"/>
+              <circle cx="205" cy="146" r="15"/>
+              <circle cx="240" cy="146" r="15"/>
+              <circle cx="275" cy="146" r="15"/>
+              <circle cx="300" cy="152" r="13"/>
+            </g>
+            <!-- strawberries on top -->
+            <g>
+              <circle cx="185" cy="140" r="12" fill="#e6414d"/>
+              <path d="M178 130 l7 10 l7 -10 z" fill="#4c9a4c"/>
+              <circle cx="225" cy="132" r="13" fill="#e6414d"/>
+              <path d="M217 121 l8 11 l8 -11 z" fill="#4c9a4c"/>
+              <circle cx="265" cy="132" r="13" fill="#e6414d"/>
+              <path d="M257 121 l8 11 l8 -11 z" fill="#4c9a4c"/>
+              <circle cx="295" cy="140" r="11" fill="#e6414d"/>
+              <path d="M289 130 l6 10 l6 -10 z" fill="#4c9a4c"/>
+            </g>
+            <!-- candles -->
+            <g>
+              <rect x="197" y="105" width="6" height="26" rx="2" fill="#f4a531"/>
+              <path d="M200 105 q-5 -8 0 -14 q5 6 0 14 z" fill="#ff8a3d"/>
+              <rect x="227" y="98" width="6" height="33" rx="2" fill="#5ec4d6"/>
+              <path d="M230 98 q-5 -8 0 -14 q5 6 0 14 z" fill="#ff8a3d"/>
+              <rect x="257" y="105" width="6" height="26" rx="2" fill="#e85a8a"/>
+              <path d="M260 105 q-5 -8 0 -14 q5 6 0 14 z" fill="#ff8a3d"/>
+            </g>
+
+            <!-- bunny cookie left -->
+            <g transform="translate(78, 335)">
+              <ellipse cx="0" cy="18" rx="26" ry="16" fill="#d9a55e"/>
+              <circle cx="-12" cy="-6" r="9" fill="#d9a55e"/>
+              <circle cx="8" cy="-8" r="9" fill="#d9a55e"/>
+              <ellipse cx="0" cy="8" rx="18" ry="12" fill="#e8bc80"/>
+              <circle cx="-6" cy="6" r="2" fill="#6b4322"/>
+              <circle cx="6" cy="5" r="2" fill="#6b4322"/>
+              <path d="M-3 12 q3 3 6 0" stroke="#6b4322" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            </g>
+
+            <!-- bunny cookie right -->
+            <g transform="translate(382, 335) scale(-1,1)">
+              <ellipse cx="0" cy="18" rx="26" ry="16" fill="#d9a55e"/>
+              <circle cx="-12" cy="-6" r="9" fill="#d9a55e"/>
+              <circle cx="8" cy="-8" r="9" fill="#d9a55e"/>
+              <ellipse cx="0" cy="8" rx="18" ry="12" fill="#e8bc80"/>
+              <circle cx="-6" cy="6" r="2" fill="#6b4322"/>
+              <circle cx="6" cy="5" r="2" fill="#6b4322"/>
+              <path d="M-3 12 q3 3 6 0" stroke="#6b4322" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            </g>
+          </svg>
+          <span class="cake-word">Birthday</span>
         </div>
       </div>
     </section>
