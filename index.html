@@ -657,7 +657,6 @@
         const salt = b64ToBuf(ENC.salt);
         const iv = b64ToBuf(ENC.iv);
         const data = b64ToBuf(ENC.data);
-        // WALANG .toLowerCase() / normalization - case-sensitive ang passcode
         const keyMaterial = await crypto.subtle.importKey(
           'raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']
         );
